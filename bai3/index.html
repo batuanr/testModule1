@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let vowels = ["a", "o", "e", "u", "i"];
+    let count = 0;
+    function checkVowel(array) {
+        for (let i = 0; i < array.length; i++) {
+            for (let j = 0; j < vowels.length; j++) {
+                if (array[i] === vowels[j]){
+                    count++;
+                }
+            }
+        }
+        if (count !== 0){
+            return true;
+        }
+        else {
+            return  false;
+        }
+    }
+    let string = prompt("Nhâp chuỗi cần kiểm tra")
+    if (checkVowel(string)) {
+        alert("Chuỗi có " + count + " kí tự nguyên âm");
+    }
+    else {
+        alert("chuỗi không có kí tự nguyên âm");
+    }
+</script>
+</body>
+</html>
